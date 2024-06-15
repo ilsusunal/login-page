@@ -29,6 +29,7 @@ body, html {
     border-radius: 4px;
     padding: 12px;
     margin-bottom: 16px;
+    background: transparent;
 }
   
 .input-icon {
