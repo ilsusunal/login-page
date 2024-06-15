@@ -1,53 +1,107 @@
+body, html {
+    margin: 0;
+    padding: 0;
+}  
+
 .login-container {
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    position: relative;
-  }
+    height: 100vh;
+}
   
-  .login-box {
+.login-box {
     padding: 40px;
     text-align: center;
     width: 300px;
-  }
+}
   
-  .logo {
-    margin-bottom: 40px;
-  }
-  
-  .form-input {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    background-color: transparent;
-  }
-  .form-input :last-child{
-    margin-bottom: 20px;
-  }
+.logo {
+    margin-bottom: 44px;
+}
 
-  .login-button-box{
+.input-container {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 12px;
+    margin-bottom: 16px;
+}
+  
+.input-icon {
+    margin-right: 10px;
+}
+  
+.form-input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: white;
+}
+
+.form-input::placeholder {
+    color: white;
+}
+
+.form-input :focus{
+    background-color: transparent;
+    color: white;
+}
+
+.login-button-box{
     display: flex;
     flex-direction: column;
     align-items: end;
     width: 100%;
-  }
+}
   
-  .login-button {
+.login-button {
     background-color: white;
     color: #264ECA;
+    font-weight: 600;
+    margin-bottom: 14px;
+    margin-top: 24px;
     border: none;
-    padding: 10px;
+    padding: 12px;
     width: 100%;
     border-radius: 4px;
     cursor: pointer;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  }
+    box-shadow:0px 4px 4px rgba(0, 0, 0, 0.2);
+}
   
-  .login-button:hover {
+.login-button:hover {
     background-color: transparent;
     color: white;
     border: 1px solid #ddd;
-  }
+}
+
+.forgot-password {
+    color: white;
+    text-decoration: none;
+    font-size: 0.9em;
+}
+  
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+.error-message {
+    color: red;
+    font-size: 0.8em;
+    margin-top: 5px;
+}
+  
+.popup-error {
+    color: white;
+    background-color: red;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 4px;
+}
+
+
+  
