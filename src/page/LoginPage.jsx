@@ -68,8 +68,8 @@ function LoginPage() {
       {loginError && (
         <div className="popup-overlay">
           <div className="popup">
+            <button onClick={closePopup} className="close-popup-button">X</button>
             <p>The provided password is wrong!</p>
-            <button onClick={closePopup} className="close-popup-button">Close</button>
           </div>
         </div>
       )}
