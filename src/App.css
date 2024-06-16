@@ -42,7 +42,7 @@ body, html {
     display: flex;
     align-items: center;
     justify-items: center;
-    border: 1px solid #ccc;
+    border: 1px solid white;
     border-radius: 4px;
     padding: 12px;
     margin-bottom: 16px;
@@ -51,6 +51,7 @@ body, html {
   
 .input-icon {
     margin-right: 10px;
+    opacity: 0.7;
 }
   
 .form-input {
@@ -59,6 +60,7 @@ body, html {
     outline: none;
     background: transparent;
     color: white;
+    opacity: 0.7;
 }
 
 .form-input::placeholder {
@@ -94,7 +96,7 @@ body, html {
 .login-button:hover {
     background-color: transparent;
     color: white;
-    border: 1px solid #ddd;
+    border: 1px solid white;
 }
 
 .forgot-password {

@@ -40,10 +40,14 @@ function LoginPage() {
               type="text"
               placeholder='USERNAME'
               className='form-input'
-              {...register('username', { required: true })} 
+              {...register('username', { 
+                required: true,
+                pattern: /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g
+              })} 
               />
           </div>
-          {errors.username && <span className="error-message">Username is required</span>}
+          {errors.username &&  errors.username.type === 'required' && <span className="error-message">Username is required.</span>}
+          {errors.username &&  errors.username.type === 'pattern' && <span className="error-message">Not a valid email!</span>}
           <div className='input-container'>
             <img src="/lock-icon.svg" alt="Lock Icon" className="input-icon" />
             <input
@@ -56,8 +60,8 @@ function LoginPage() {
               })}
             />
           </div>
-          {errors.password && errors.password.type === 'required' && <span className="error-message">Password is required</span>}
-          {errors.password && errors.password.type === 'pattern' && <span className="error-message">Wrong combination</span>}
+          {errors.password && errors.password.type === 'required' && <span className="error-message">Password is required.</span>}
+          {errors.password && errors.password.type === 'pattern' && <span className="error-message">Wrong combination!</span>}
           <div className='login-button-box'>
             <button type="submit" className="login-button">LOGIN</button>
             <a href="#" className="forgot-password">Forgot password?</a>
