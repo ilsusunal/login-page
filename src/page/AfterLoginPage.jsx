@@ -2,7 +2,9 @@ import React from 'react'
 
 function AfterLoginPage() {
   return (
-    <div>Blank page after successful login.</div>
+    <>
+      <p className='blank-page-text'>Blank page after successful login.</p>
+    </>
   )
 }
 

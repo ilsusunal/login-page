@@ -52,7 +52,7 @@ function LoginPage() {
             />
           </div>
           {errors.password && errors.password.type === 'required' && <span className="error-message">Password is required</span>}
-            {errors.password && errors.password.type === 'pattern' && <span className="error-message">Wrong combination</span>}
+          {errors.password && errors.password.type === 'pattern' && <span className="error-message">Wrong combination</span>}
           <div className='login-button-box'>
             <button type="submit" className="login-button">LOGIN</button>
             <a href="#" className="forgot-password">Forgot password?</a>
