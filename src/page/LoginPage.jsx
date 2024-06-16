@@ -12,7 +12,6 @@ function LoginPage() {
 
   const onSubmit = data => {
     const { username, password } = data;
-
     if (username === validUsername && password === validPassword) {
       setLoginError(false);
       history.push('/blank-page');
@@ -21,16 +20,22 @@ function LoginPage() {
     }
   };
 
+  const closePopup = () => {
+    setLoginError(false);
+  };
+
   return (
     <>
+    <main className='main-container'>
+    <img src="/BG.svg" alt="background image" className="bg-image wave"/>
     <div className='login-container'>
       <div className='login-box'>
         <div className="logo">
-          <img src="/shopping-cart.png" alt="User Logo" />
+          <img src="/form-logo.svg" alt="Form Logo" />
         </div>
         <form onSubmit={handleSubmit(onSubmit)}>
           <div className='input-container'>
-            <img src="/user.png" alt="User Logo" className="input-icon" />
+            <img src="/user-icon.svg" alt="User Icon" className="input-icon" />
             <input 
               type="text"
               placeholder='USERNAME'
@@ -40,7 +45,7 @@ function LoginPage() {
           </div>
           {errors.username && <span className="error-message">Username is required</span>}
           <div className='input-container'>
-            <img src="/lock.png" alt="Lock Logo" className="input-icon" />
+            <img src="/lock-icon.svg" alt="Lock Icon" className="input-icon" />
             <input
               type="password"
               placeholder="PASSWORD"
@@ -56,11 +61,19 @@ function LoginPage() {
           <div className='login-button-box'>
             <button type="submit" className="login-button">LOGIN</button>
             <a href="#" className="forgot-password">Forgot password?</a>
-            {loginError && <div className="popup-error">The provided password is wrong!</div>}
           </div>
         </form>
       </div>
     </div>
+      {loginError && (
+        <div className="popup-overlay">
+          <div className="popup">
+            <p>The provided password is wrong!</p>
+            <button onClick={closePopup} className="close-popup-button">Close</button>
+          </div>
+        </div>
+      )}
+    </main>
     </>
   )
 }
