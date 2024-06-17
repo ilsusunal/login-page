@@ -27,7 +27,7 @@ function LoginPage() {
   return (
     <>
     <main className='main-container'>
-    <img src="/BG.svg" alt="background image" className="bg-image wave"/>
+    <img src="/BG.svg" alt="background image" className="bg-image"/>
     <div className='login-container'>
       <div className='login-box'>
         <div className="logo">
